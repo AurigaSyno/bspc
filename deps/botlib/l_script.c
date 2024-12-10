@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //#define SCREWUP
 //#define BOTLIB
 //#define MEQCC
-//#define BSPC
+#define BSPC
 
 #ifdef SCREWUP
 #include <stdio.h>
@@ -1371,7 +1371,7 @@ script_t *LoadScriptFile(const char *filename)
 	fclose(fp);
 #endif
 	//
-	script->length = COM_Compress(script->buffer);
+	script->length = strlen(script->buffer);
 
 	return script;
 } //end of the function LoadScriptFile
